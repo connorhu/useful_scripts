@@ -7,6 +7,6 @@ cd /opt/
 tar -xf $latest_file
 node_dir=$(echo $latest_file | sed 's/.tar.gz//')
 ln -s $node_dir node
-cat /etc/environment | sed "s/\"\$/:\/opt\/node\"/" > /etc/environment.tmp
+cat /etc/environment | sed "s/\"\$/:\/opt\/node\/bin\"/" > /etc/environment.tmp
 mv /etc/environment.tmp /etc/environment
 rm *.gz
