@@ -3,6 +3,11 @@
 echo -n "Username: "
 read user
 
+if [ ! "$user" ]
+then
+  exit
+fi
+
 sudoer_filename="10_${user}"
 
 echo "
